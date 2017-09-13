@@ -1,3 +1,5 @@
+
+
 <!--DOCTYPE html>
 
 
@@ -88,7 +90,37 @@
       </script>
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCwYqJa7JQZ6OYP8pmOblwijW73sE1pzw&callback=initMap"
       async defer></script>
+      <div data-role="page" id="startTracking">
 
+  <div data-role="header">
+    <h1>Track Workout</h1>
+
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-transition="none" data-icon="home">Home</a></li>
+        <li><a href="#startTracking" data-transition="none" data-icon="plus">Track Workout</a></li>
+        <li><a href="#history" data-transition="none" data-icon="star">History</a></li>
+      </ul>
     </div>
+  </div>
+
+  <div data-role="content">
+    <p id="startTracking_status"></p>
+      <div data-role="fieldcontain" class="ui-hide-label">
+        <label for="track_id">Track ID/Name:</label>
+        <input type="text" name="track_id" id="track_id" placeholder="Workout ID/Name"/>
+      </div>
+
+    <button data-role="button" id="startTracking_start">Start Tracking</button>
+    <button data-role="button" id="startTracking_stop">Stop Tracking</button>
+
+        <p id="startTracking_debug"></p>
+
+  </div>
+
+
+</div>
+    </div>
+
   </body>
 </html>
