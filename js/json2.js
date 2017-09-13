@@ -1,5 +1,3 @@
-s
-*/
 
 /*property
     JSON, apply, call, charCodeAt, getUTCDate, getUTCFullYear, getUTCHours,
