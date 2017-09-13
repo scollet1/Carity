@@ -42,8 +42,20 @@
 <html>
   <head>
     <title>ExerciseTracker</title>
-
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+      <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyCnQcW1re7VmCmGYcQ25q-nMqlYGmP9mgM",
+          authDomain: "tracker-1505328251859.firebaseapp.com",
+          databaseURL: "https://tracker-1505328251859.firebaseio.com",
+          projectId: "tracker-1505328251859",
+          storageBucket: "",
+          messagingSenderId: "216379628281"
+      };
+      firebase.initializeApp(config);
+    </script>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="js/cordova-1.7.0.js"></script>
@@ -87,7 +99,7 @@
     </div>
     <div data-role="page" id="startTracking">
       <div data-role="header">
-        <h1>Track Workout</h1>
+        <h1>Track</h1>
         <div data-role="navbar">
           <ul>
             <li><a href="#home" data-transition="none" data-icon="home">Home</a></li>
