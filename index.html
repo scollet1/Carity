@@ -50,10 +50,39 @@
     </div>
 </div>
 
+<!----------------------------------------------------------------------------->
+
+<div id="tripmeter">
+  <p>
+    Starting Location (lat, lon):<br/>
+    <span id="startLat">???</span>°, <span id="startLon">???</span>°
+  </p>
+  <p>
+    Current Location (lat, lon):<br/>
+    <span id="currentLat">???</span>°, <span id="currentLon">???</span>°
+  </p>
+  <p>
+    Distance from starting location:<br/>
+    <span id="distance">0</span> km
+  </p>
+</div>
+
+<script>
+window.onload = function() {
+  var startPos;
+  navigator.geolocation.getCurrentPosition(function(position) {
+    startPos = position;
+    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+  });
+};
+</script>
+<!----------------------------------------------------------------------------->
+
 <style>
 #myProgress {
   width: 100%;
-  background-color: #ddd;
+  background-color: w3-teal;
 }
 
 #myBar {
@@ -73,11 +102,14 @@
 <br>
 <button onclick="move()">Click Me</button>
 
+
+
 <script>
 function move() {
   var elem = document.getElementById("myBar");
   var width = 10;
   var id = setInterval(frame, 10);
+
   function frame() {
     if (width >= 100) {
       clearInterval(id);
