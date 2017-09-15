@@ -114,14 +114,14 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
 </script-->
-
-    <div id="map"></div>
+  <div id="map"></div>
     <script>
+      var progress = 0;
       // Note: This example requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service
       // failed.", it means you probably did not give permission for the browser to
       // locate you.
-      var map, infoWindow;
+      var map, infoWindow, startPos;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: -34.397, lng: 150.644},
@@ -136,7 +136,7 @@ function closeNav() {
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
-
+            startPos = pos;
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
             infoWindow.open(map);
@@ -157,9 +157,44 @@ function closeNav() {
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
       }
+      while (navigator.geolocation) {
+        navigator.geolocation.watchPosition(function(position) {
+          var newPos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          };
+          if (startPos != newPos)
+            move();
+          startPos = newPos;
+          infoWindow.setPosition(newPos);
+          infoWindow.setContent('Location found.');
+          infoWindow.open(map);
+          map.setCenter(newPos);
+        }, function() {
+          handleLocationError(true, infoWindow, map.getCenter());
+        });
+      }
+    function move() {
+      var elem = document.getElementById("myBar");
+      var width = 5;
+      var id = setInterval(frame, 10);
+      function frame() {
+        if (width == 100) {
+          clearInterval(id);
+        } else {
+          width++;
+          elem.style.width = width + '%';
+          elem.innerHTML = width * 1  + '%';
+        }
+      }
+    }
+  </script>
     </script>
+    <div id="myProgress">
+      <div id="myBar">0%</div>
+    </div>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCwYqJa7JQZ6OYP8pmOblwijW73sE1pzw&callback=initMap">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCwYqJa7JQZ6OYP8pmOblwijW73sE1pzw&callback=initMap">
     </script>
   </body>
 </html>
