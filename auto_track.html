@@ -157,7 +157,7 @@ function closeNav() {
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
       }
-      while (navigator.geolocation) {
+      if (navigator.geolocation) {
         navigator.geolocation.watchPosition(function(position) {
           var newPos = {
             lat: position.coords.latitude,
