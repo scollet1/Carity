@@ -166,7 +166,7 @@ function closeNav() {
           document.getElementById('startLon').innerHTML = startPos.coords.longitude;
         }, function(error) {
         alert('Error occurred. Error code: ' + error.code);
-        }
+      });
         navigator.geolocation.watchPosition(function(position) {
           document.getElementById('currentLat').innerHTML = position.coords.latitude;
           document.getElementById('currentLon').innerHTML = position.coords.longitude;
