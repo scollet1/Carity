@@ -73,10 +73,11 @@ window.onload = function() {
   var holdPos;
   startPos = navigator.geolocation.getCurrentPosition(function(position) {
     holdPos = position;
-    document.getElementById('startLat').innerHTML = holdPos.coords.latitude;
-    document.getElementById('startLon').innerHTML = holdPos.coords.longitude;
+    //document.getElementById('startLat').innerHTML = holdPos.coords.latitude;
+    //document.getElementById('startLon').innerHTML = holdPos.coords.longitude;
     return (holdPos);
   });
+  console.log(startPos);
   move = startPos;
   if (startPos != move) {
       var elem = document.getElementById("myBar");
