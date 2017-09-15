@@ -176,13 +176,16 @@ function closeNav() {
       }
     function move() {
       var elem = document.getElementById("myBar");
-      var width = 0;
-      if (width == 100) {
-        clearInterval(id);
-      } else {
-        width++;
-        elem.style.width = width + '%';
-        elem.innerHTML = width * 1  + '%';
+      var width = 5;
+      var id = setInterval(frame, 10);
+      function frame() {
+        if (width == 100) {
+          clearInterval(id);
+        } else {
+          width++;
+          elem.style.width = width + '%';
+          elem.innerHTML = width * 1  + '%';
+        }
       }
     }
   </script>
@@ -198,13 +201,34 @@ function closeNav() {
           document.getElementById("mySidebar").style.display = "none";
       }
     </script>
+    <div id="myProgress">
+      <div id="myBar">0%</div>
+    </div>
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCwYqJa7JQZ6OYP8pmOblwijW73sE1pzw&callback=initMap">
     </script>
 
+    <div class="w3-container">
     <div class="w3-light-gray">
       <div id="myBar" class="w3-center w3-padding w3-theme" style="width:5%">0%</div>
     </div><br>
+    </div>
+    <script>
+      function move() {
+        var elem = document.getElementById("myBar");
+        var width = 5;
+        var id = setInterval(frame, 10);
+        function frame() {
+          if (width == 100) {
+            clearInterval(id);
+          } else {
+            width++;
+            elem.style.width = width + '%';
+            elem.innerHTML = width * 1  + '%';
+          }
+        }
+      }
+    </script>
   </div>
   </body>
 </html>
