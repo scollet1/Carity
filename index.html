@@ -10,15 +10,17 @@
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-deep-orange.css">
   <script type="text/javascript" src="//www.shieldui.com/shared/components/latest/js/jquery-1.11.1.min.js"></script>
   <script type="text/javascript" src="//www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
-  <head><style>
+  <head>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <style>
     @font-face {
       font-family: Fester-Medium;
-      src: url(fonts/FesterFF/Fester Medium.otf);
+      src: url(fonts/FesterFF/Fester_Medium.ttf);
       font-weight: bold;
     }
   @font-face {
   font-family: Code-Light;
-  src: url(fonts/code/CODE Light.otf);
+  src: url(fonts/CODE Light.otf);
     font-weight: bold;
   }
   header {
@@ -37,7 +39,7 @@
   }
 
   h1 {
-    font-size: 100%;
+    font-size: 200%;
     font-family: Fester-Medium;
   }
 
@@ -46,12 +48,6 @@
     font-family: Code-Light;
     color: black;
   }
-
-  .fester_font {
-    font-size: 100%;
-    font-family: Code-Light;
-  }
-
   .custom_red {
     background-color: #ea5741;
     color: black;
@@ -59,20 +55,59 @@
     max-height:100%;
     /*background-color: #ea5741;*/
   }
+  .button {
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+  /*box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);*/
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+
+}
   </style></head>
   <body>
-    <header class="w3-container w3-center custom_red w3-card-4">
-      <h1 class="w3-container w3-center custom_red fester_font">Home</h1>
-    </header>
+    <a href="home.html">
+      <header class="w3-container w3-center custom_red w3-card-4">
+        <button class="button w3-center custom_red"><span>Home</span></button>
+      </header>
+    </a>
     <a style="display:block" href="home.html">
       <div class="w3-card-4">
         <div class="w3-center w3-display-middle"><img src="./images/favicon_carity.png" width="500" height="500"></div>
       </div>
     </a>
   </body>
-  <footer class="w3-container custom_red w3_center w3-card-4 w3-padding-16 fester_font">
-    <h1 class="fester_font w3-center">About
-      <ul></ul>
+  <footer class="w3-container custom_red w3_center w3-card-4 w3-padding-16">
+    <h1 class="w3-center">About
     </h1>
   </footer>
 

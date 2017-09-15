@@ -10,6 +10,102 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script type="text/javascript" src="//www.shieldui.com/shared/components/latest/js/jquery-1.11.1.min.js"></script>
   <script type="text/javascript" src="//www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+<head>
+  <style>
+  @font-face {
+    font-family: Fester-Medium;
+    src: url(fonts/FesterFF/Fester_Medium.ttf);
+    font-weight: bold;
+
+  }
+  @font-face {
+    font-family: Code-Light;
+    src: url(fonts/code/CODE_Light.otf);
+    font-weight: bold;
+  }
+
+  footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  font-size: 100%;
+  font-family: Fester-Medium;
+  }
+
+  h1 {
+  font-size: 200%;
+  font-family: Fester-Medium;
+  }
+
+  h2 {
+  font-size: 100%;
+  font-family: Code-Light;
+  color: black;
+  }
+  .custom_red {
+  background-color: #ea5741;
+  color: black;
+  max-width:100%;
+  max-height:100%;
+  /*background-color: #ea5741;*/
+  }
+  .button {
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  }
+
+  .button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  }
+
+  .button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  }
+
+  .button:hover span {
+  padding-right: 25px;
+  /*box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);*/
+  }
+
+  .button:hover span:after {
+  opacity: 1;
+  right: 0;
+
+  }
+
+  #myProgress {
+    width: 100%;
+    background-color: w3-teal;
+  }
+
+  #myBar {
+    width: 10%;
+    height: 30px;
+    background-color: #4CAF50;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+  }
+  </style>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
 <body>
 
 <!---------------------------------------------------------- Side Navigation -->
@@ -81,38 +177,22 @@ function closeNav() {
 document.getElementById("mySidenav").style.width = "0";
 }
 </script-->
-<style>
-.custom_red {
-  color: #ea5741;
-  max-width:100%;
-  max-height:100%;
-  /*background-color: #ea5741;*/
-}
-h1  {
- font-size: 100%;
- font-family: "Fester semibold";
-}
-
-h2 {
-  font-size: 100%;
-  font-family: "Code Light";
-}
-</style>
 
 <nav class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left w3-center" style="display:none" id="mySidebar">
-  <h1 class="w3-large w3-text-theme">Side Navigation</h1>
-  <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
-  <a href="index.html" class="w3-bar-item w3-button">Home</a>
-  <a href="#" class="w3-bar-item w3-button">About</a>
+  <div style="font-family:Fester-Medium;">
+    <button class="w3-bar-item w3-button" onclick="w3_close()">Close<i class="fa fa-remove"></i></button>
+    <a href="home.html" class="w3-bar-item w3-button">Home</a>
+    <a href="#" class="w3-bar-item w3-button">About</a>
+  </div>
   <!--a href="#" class="w3-bar-item w3-button">Link 3</a>
   <a href="#" class="w3-bar-item w3-button">Link 4</a-->
 </nav>
 
 <!-- Header -->
-<header class="w3-container custom_red w3-padding" id="myHeader">
+<header class="w3-container w3-padding" id="myHeader">
   <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button custom_red"></i>
   <div class="w3-center">
-    <img src="./images/logo_carity.png">
+    <img src="./images/logo_carity.png" width="600" height="200">
     <h4>SUBTITLE</h4>
   </div>
 </header>
@@ -198,9 +278,9 @@ h2 {
 <a style="display:block" href="auto_track.html">
   <div>
     <div class="w3-single">
-      <div class="w3-card-2 w3-container w3-teal" style="min-height:100px">
-        <h3>Auto</h3><br>
-        <i class="fa fa-automobile w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+      <div class="w3-card-4 w3-center w3-container custom_red w3-margin" style="min-height:100px;border-radius: 25px;">
+        <h1>Auto</h1><br>
+        <i class="fa fa-automobile w3-margin-bottom w3-text-theme custom_red" style="font-size:120px;color:white;"></i>
         <p>placeholder</p>
       </div>
     </div>
@@ -208,33 +288,33 @@ h2 {
 </a>
 
   <div class="w3-quarter">
-    <div class="w3-card-2 w3-container w3-teal" style="min-height:100px">
-    <h3>Running</h3><br>
-    <i class="material-icons w3-margin-bottom w3-text-theme" style="font-size:120px">directions_run</i>
+    <div class="w3-card-4 w3-container custom_red w3-margin" style="min-height:100px;border-radius: 25px;">
+    <h1>Running</h1><br>
+    <i class="material-icons w3-margin-bottom custom_red" style="font-size:120px;color:white;">directions_run</i>
     <p>placeholder</p>
     </div>
   </div>
 
   <div class="w3-quarter">
-    <div class="w3-card-2 w3-container w3-teal" style="min-height:100px">
-    <h3>Walking</h3><br>
-    <i class="material-icons w3-margin-bottom w3-text-theme" style="font-size:120px">directions_walk</i>
+    <div class="w3-card-4 w3-container custom_red w3-margin" style="min-height:100px;border-radius: 25px;">
+    <h1>Walking</h1><br>
+    <i class="material-icons w3-margin-bottom w3-text-theme custom_red" style="font-size:120px;color:white;">directions_walk</i>
     <p>placeholder</p>
     </div>
   </div>
 
   <div class="w3-quarter">
-    <div class="w3-card-2 w3-container w3-teal" style="min-height:100px">
-    <h3>Biking</h3><br>
-    <i class="fa fa-bicycle w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+    <div class="w3-card-4 w3-container custom_red w3-margin" style="min-height:100px;border-radius: 25px;">
+    <h1>Biking</h1><br>
+    <i class="fa fa-bicycle w3-margin-bottom custom_red" style="font-size:120px;color:white;"></i>
     <p>placeholder</p>
     </div>
   </div>
 
   <div class="w3-quarter">
-    <div class="w3-card-2 w3-container w3-teal" style="min-height:100px">
-    <h3>Public</h3><br>
-    <i class="fa fa-bus w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+    <div class="w3-card-4 w3-container custom_red w3-margin" style="min-height:100px;border-radius: 25px;">
+    <h1>Public</h1><br>
+    <i class="fa fa-bus w3-margin-bottom w3-text-theme custom_red" style="font-size:120px;color:white;"></i>
     <p>placeholder</p>
     </div>
   </div>
