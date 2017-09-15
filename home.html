@@ -1,0 +1,813 @@
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link id="themecss" rel="stylesheet" type="text/css" href="//www.shieldui.com/shared/components/latest/css/light/all.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script type="text/javascript" src="//www.shieldui.com/shared/components/latest/js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="//www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+<body>
+
+<!---------------------------------------------------------- Side Navigation -->
+<!--style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 0px;
+    text-align:center;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    /*opacity: 0.3;*/
+}
+
+.sidenav a:hover{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+
+<div id="mySidenav" class="sidenav">
+<nav class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left w3-center" style="display:none" id="mySidebar">
+
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<a href="index.html">Home</a>
+<a href="#">Services</a>
+<a href="#">Clients</a>
+<a href="#">Contact</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+<script>
+function openNav() {
+document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+document.getElementById("mySidenav").style.width = "0";
+}
+</script-->
+<nav class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left w3-center" style="display:none" id="mySidebar">
+  <h1 class="w3-large w3-text-theme">Side Navigation</h1>
+  <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
+  <a href="index.html" class="w3-bar-item w3-button">Home</a>
+  <a href="#" class="w3-bar-item w3-button">About</a>
+  <!--a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button">Link 4</a-->
+</nav>
+
+<!-- Header -->
+<header class="w3-container w3-theme w3-padding" id="myHeader">
+  <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i>
+  <div class="w3-center">
+    <h4>SUBTITLE</h4>
+    <h1 class="w3-xxxlarge w3-animate-bottom">Carity</h1>
+  </div>
+</header>
+
+<!-- Modal -->
+<div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-top">
+      <header class="w3-container w3-theme-l1">
+        <span onclick="document.getElementById('id01').style.display='none'"
+        class="w3-button w3-display-topright">×</span>
+        <h4>Oh snap! We just showed you a modal..</h4>
+        <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+      </header>
+      <div class="w3-padding">
+        <p>Cool huh? Ok, enough teasing around..</p>
+        <p>Go to our <a class="w3-btn" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
+      </div>
+      <footer class="w3-container w3-theme-l1">
+        <p>Modal footer</p>
+      </footer>
+    </div>
+</div>
+
+<!----------------------------------------------------------------------------->
+
+<!--div id="tripmeter">
+  <p>
+    Starting Location (lat, lon):<br/>
+    <span id="startLat">???</span>°, <span id="startLon">???</span>°
+  </p>
+  <p>
+    Current Location (lat, lon):<br/>
+    <span id="currentLat">???</span>°, <span id="currentLon">???</span>°
+  </p>
+  <p>
+    Distance from starting location:<br/>
+    <span id="distance">0</span> km
+  </p>
+</div-->
+
+
+
+<!----------------------------------------------------------------------------->
+
+<!--div id="myProgress">
+  <div id="myBar">0%</div>
+</div>
+
+<div class="w3-container">
+  <hr>
+  <div class="w3-center">
+    <h2>Table Title</h2>
+  </div>
+<div class="w3-responsive w3-card-4">
+<table class="w3-table w3-striped w3-bordered">
+<thead>
+<tr class="w3-theme">
+  <th>placeholder</th>
+  <th>placeholder</th>
+  <th>placeholder</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>placeholder</td>
+  <td>placeholder</td>
+  <td>placeholder</td>
+</tr>
+<tr class="w3-white">
+  <td>placeholder</td>
+  <td>placeholder</td>
+  <td>placeholder</td>
+</tr>
+<tr>
+  <td>placeholder</td>
+  <td>placeholder</td>
+  <td>placeholder</td>
+</tr>
+</tbody>
+</table>
+</div-->
+
+<a style="display:block" href="auto_track.html">
+  <div>
+    <div class="w3-single">
+      <div class="w3-card-2 w3-container w3-teal" style="min-height:100px">
+        <h3>Auto</h3><br>
+        <i class="fa fa-automobile w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+        <p>placeholder</p>
+      </div>
+    </div>
+  </div>
+</a>
+
+  <div class="w3-quarter">
+    <div class="w3-card-2 w3-container w3-teal" style="min-height:100px">
+    <h3>Running</h3><br>
+    <i class="material-icons w3-margin-bottom w3-text-theme" style="font-size:120px">directions_run</i>
+    <p>placeholder</p>
+    </div>
+  </div>
+
+  <div class="w3-quarter">
+    <div class="w3-card-2 w3-container w3-teal" style="min-height:100px">
+    <h3>Walking</h3><br>
+    <i class="material-icons w3-margin-bottom w3-text-theme" style="font-size:120px">directions_walk</i>
+    <p>placeholder</p>
+    </div>
+  </div>
+
+  <div class="w3-quarter">
+    <div class="w3-card-2 w3-container w3-teal" style="min-height:100px">
+    <h3>Biking</h3><br>
+    <i class="fa fa-bicycle w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+    <p>placeholder</p>
+    </div>
+  </div>
+
+  <div class="w3-quarter">
+    <div class="w3-card-2 w3-container w3-teal" style="min-height:100px">
+    <h3>Public</h3><br>
+    <i class="fa fa-bus w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+    <p>placeholder</p>
+    </div>
+  </div>
+</div>
+
+<!--div class="w3-padding w3-white w3-display-container">
+  <span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright"><i class="fa fa-remove"></i></span>
+  <h2>London</h2>
+  <p>London is the capital city of England. It is the most populous city in the United Kingdom,
+  with a metropolitan area of over 13 million inhabitants.</p>
+  <p>Standing on the River Thames, London has been a major settlement for two millennia,
+  its history going back to its founding by the Romans, who named it Londinium.</p>
+  <p>By the way, you can add a close icon to all containers if you want the ability to hide them. Look to your right!</p>
+</div-->
+
+
+
+<hr>
+<h2 class="w3-center">Forms and Lists</h2>
+</div>
+
+<div class="w3-row-padding">
+
+<div class="w3-half">
+<form class="w3-container w3-card-4">
+  <h2>Input Form</h2>
+  <div class="w3-section">
+    <input class="w3-input" type="text" required>
+    <label>Name</label>
+  </div>
+  <div class="w3-section">
+    <input class="w3-input" type="text" required>
+    <label>Email</label>
+  </div>
+  <div class="w3-section">
+    <input class="w3-input" type="text" required>
+    <label>Subject</label>
+  </div>
+
+  <div class="w3-row">
+  <div class="w3-half">
+    <input id="milk" class="w3-check" type="checkbox" checked="checked">
+    <label>Milk</label>
+    <br>
+    <input id="sugar" class="w3-check" type="checkbox">
+    <label>Sugar</label>
+    <br>
+    <input id="lemon" class="w3-check" type="checkbox" disabled>
+    <label>Lemon (Disabled)</label>
+    <br><br>
+  </div>
+
+  <div class="w3-half">
+    <input id="male" class="w3-radio" type="radio" name="gender" value="male" checked>
+    <label>Male</label>
+    <br>
+    <input id="female" class="w3-radio" type="radio" name="gender" value="female">
+    <label>Female</label>
+    <br>
+    <input id="unknown" class="w3-radio" type="radio" name="gender" value="" disabled>
+    <label> Don't know (Disabled)</label>
+  </div>
+  </div>
+</form>
+</div>
+<div class="w3-half">
+<div class="w3-card-4 w3-container">
+<h2>Lists</h2>
+<ul class="w3-ul w3-margin-bottom">
+  <li>placeholder</li>
+  <li>placeholder</li>
+  <li>placeholder</li>
+</ul>
+<br>
+<ul class="w3-ul w3-border w3-hoverable">
+  <li class="w3-theme">Jill</li>
+  <li>placeholder</li>
+  <li>Adam</li>
+  <li>Steve</li>
+</ul>
+<br>
+</div>
+</div>
+</div>
+<hr>
+
+<h2 class="w3-center">Progress Bars</h2>
+<div class="w3-container">
+
+<div class="w3-light-gray">
+  <div id="myBar" class="w3-center w3-padding w3-theme" style="width:5%">5%</div>
+</div><br>
+<button class="w3-btn w3-theme" onclick="move()">Click Me</button>
+</div>
+<hr>
+
+<div class="w3-container">
+<hr>
+<h2 class="w3-center">Navigation</h2>
+
+<div class="w3-bar w3-theme">
+  <a href="#" class="w3-bar-item w3-button w3-padding-16">Home</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-16">Link 1</a>
+  <div class="w3-dropdown-hover">
+    <button class="w3-button w3-padding-16">
+      Dropdown <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="javascript:void(0)" class="w3-bar-item w3-button">Link 1</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button">Link 2</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button">Link 3</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+    <div id="qrcode" class="qrcode"></div>
+    <div class="qrcode-config">
+        <h3>Text Value</h3>
+        <textarea style="width: 160px;" id="textValue">Enter QR code value here</textarea>
+        <h3>Options</h3>
+        <div class="clearfix">
+            <label for="size">Size:</label>
+            <input type="text" id="size" value="250" /> px
+        </div>
+        <div class="clearfix">
+            <label for="mode">Mode:</label>
+            <select id="mode">
+                <option value="Byte">Byte</option>
+                <option value="Alphanumeric">Alphanumeric</option>
+                <option value="Numeric">Numeric</option>
+            </select>
+        </div>
+        <div class="clearfix">
+            <label for="error">Error Level:</label>
+            <select id="error">
+                <option value="L">L</option>
+                <option value="M">M</option>
+                <option value="H">H</option>
+                <option value="Q">Q</option>
+            </select>
+        </div>
+        <div class="clearfix">
+            <div class="exception"></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    jQuery(function ($) {
+        var textValue = $("#textValue").shieldTextBox({
+            events: {
+                change: update
+            }
+        }).swidget();
+        var size = $("#size").shieldNumericTextBox({
+            min: 100,
+            max: 350,
+            step: 10,
+            events: {
+                change: update
+            }
+        }).swidget();
+        var mode = $("#mode").shieldDropDown({
+            events: {
+                select: update
+            }
+        }).swidget();
+        var error = $("#error").shieldDropDown({
+            events: {
+                select: update
+            }
+        }).swidget();
+        var qrcode = null;
+        function update() {
+            if (qrcode) {
+                qrcode.destroy();
+            }
+            $(".exception").html("");
+            try {
+                qrcode = $("#qrcode").shieldQRcode({
+                    value: textValue.value(),
+                    size: size.value(),
+                    errorLevel: error.value(),
+                    mode: mode.value()
+                }).swidget();
+            }
+            catch (err) {
+                $(".exception").html(err);
+                return;
+            }
+        }
+        update();
+    });
+</script>
+<style type="text/css" scoped>
+    .container
+    {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .qrcode
+    {
+        display: inline-block;
+        padding: 10px;
+    }
+    .qrcode-config
+    {
+        display: inline-block;
+        padding: 10px;
+    }
+        .qrcode-config h3
+        {
+            margin-bottom: 10px;
+        }
+        .qrcode-config textarea
+        {
+            display: block;
+            height: 60px;
+            resize: none;
+            margin-bottom: 20px;
+        }
+        .qrcode-config label
+        {
+            float: left;
+            width: 75px;
+        }
+    .exception
+    {
+        color: red;
+        display: block;
+    }
+</style>
+
+<hr>
+<h2 class="w3-center">Accordions</h2>
+<button onclick="myAccFunc('Demo1')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align">Open Section 1</button>
+<div id="Demo1" class="w3-hide">
+  <div class="w3-container">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+</div>
+<button onclick="myAccFunc('Demo2')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align">Open Section 2</button>
+<div id="Demo2" class="w3-hide">
+  <a href="#" class="w3-button w3-block w3-left-align">Link 1</a>
+  <a href="#" class="w3-button w3-block w3-left-align">Link 2</a>
+  <a href="#" class="w3-button w3-block w3-left-align">Link 3</a>
+</div>
+<button onclick="myAccFunc('Demo3')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align">Open Section 3</button>
+<div id="Demo3" class="w3-hide w3-black">
+  <div class="w3-container">
+    <p>Accordion with Images:</p>
+    <img src="/w3images/fjords.jpg" style="width:30%;" class="w3-animate-zoom">
+    <p>Trolltunga, Norway</p>
+  </div>
+</div>
+
+<hr>
+<h2 class="w3-center">Tabs</h2>
+<div class="w3-border">
+<div class="w3-bar w3-theme">
+  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'London')">London</button>
+  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'Paris')">Paris</button>
+  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'Tokyo')">Tokyo</button>
+</div>
+
+<div id="London" class="w3-container city w3-animate-opacity">
+  <h2>London</h2>
+  <p>London is the capital city of England.</p>
+  <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+</div>
+
+<div id="Paris" class="w3-container city w3-animate-opacity">
+  <h2>Paris</h2>
+  <p>Paris is the capital of France.</p>
+  <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.</p>
+</div>
+
+<div id="Tokyo" class="w3-container city w3-animate-opacity">
+  <h2>Tokyo</h2>
+  <p>Tokyo is the capital of Japan.</p>
+  <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+</div>
+</div>
+
+<hr>
+<h2 class="w3-center">Buttons</h2>
+<div class="w3-center">
+  <br>
+  <a class="w3-button w3-theme">Button</a>
+  <a class="w3-button w3-theme">Button</a>
+  <a class="w3-button w3-theme-d3 w3-disabled">Button</a>
+  <br><br>
+  <a class="w3-button w3-circle w3-large w3-black"><i class="fa fa-plus"></i></a>
+  <a class="w3-button w3-circle w3-large w3-theme"><i class="fa fa-plus"></i></a>
+  <a class="w3-button w3-circle w3-large w3-card-4"><i class="fa fa-plus"></i></a>
+</div>
+<br>
+<div class="w3-center">
+  <div class="w3-dropdown-hover">
+    <button class="w3-button w3-theme">Dropdown <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+      <a href="#" class="w3-bar-item w3-button">Link 1</a>
+      <a href="#" class="w3-bar-item w3-button">Link 2</a>
+      <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<hr>
+<div class="w3-center">
+  <h2>Pagination</h2>
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-theme">«</a>
+      <a href="#" class="w3-bar-item w3-button w3-theme w3-hover-theme">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-theme">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-theme">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-theme">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-theme">5</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-theme">»</a>
+    </div>
+  </div>
+</div>
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-dark w3-padding-16">
+  <h3>Footer</h3>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-theme-light w3-padding">Go To Top</span> 
+    <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+  <p>Remember to check out our  <a href="w3css_references.asp" class="w3-btn w3-theme-light" target="_blank">W3.CSS Reference</a></p>
+</footer>
+
+<!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
+<script>
+// Side navigation
+function w3_open() {
+    var x = document.getElementById("mySidebar");
+    x.style.width = "100%";
+    x.style.fontSize = "40px";
+    x.style.paddingTop = "10%";
+    x.style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+
+// Tabs
+function openCity(evt, cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  var activebtn = document.getElementsByClassName("testbtn");
+  for (i = 0; i < x.length; i++) {
+      activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-dark-grey";
+}
+
+var mybtn = document.getElementsByClassName("testbtn")[0];
+mybtn.click();
+
+// Accordions
+function myAccFunc(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// Slideshows
+var slideIndex = 1;
+
+function plusDivs(n) {
+slideIndex = slideIndex + n;
+showDivs(slideIndex);
+}
+
+function showDivs(n) {
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+
+showDivs(1);
+
+// Progress Bars
+function move() {
+  var elem = document.getElementById("myBar");
+  var width = 5;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width == 100) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + '%';
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+}
+</script>
+
+</body>
+</html>
+
+
+<!--DOCTYPE html>
+
+
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+       }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCwYqJa7JQZ6OYP8pmOblwijW73sE1pzw&callback=initMap"
+    async defer></script>
+  </body>
+</html-->
+
+<!--DOCTYPE HTML>
+<html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+  <head>
+    <title>ExerciseTracker</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+      <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyCnQcW1re7VmCmGYcQ25q-nMqlYGmP9mgM",
+          authDomain: "tracker-1505328251859.firebaseapp.com",
+          databaseURL: "https://tracker-1505328251859.firebaseio.com",
+          projectId: "tracker-1505328251859",
+          storageBucket: "",
+          messagingSenderId: "216379628281"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="js/cordova-1.7.0.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD353fOPh-KBUQ-2ekPCg75uxXRn0D9Tk&sensor=false"></script>
+    <script type="text/javascript" src="js/json2.js"></script>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script src="/__/firebase/4.3.0/firebase-app.js"></script>
+    <script src="/__/firebase/4.3.0/firebase-auth.js"></script>
+    <script src="/__/firebase/4.3.0/firebase-database.js"></script>
+    <script src="/__/firebase/4.3.0/firebase-messaging.js"></script>
+
+    <!-- Leave out Storage -->
+    <!-- <script src="/__/firebase/4.3.0/firebase-storage.js"></script> >
+
+    <script src="/__/firebase/init.js"></script>
+    <!--script type="text/javascript" src="jquery.mobile-1.1.0.min.js"></script>
+      <script type="text/javascript" src="js/exercisetracker.js"></script>
+      <script> type="text/javascript" src="js/ui.js" </script>
+    <link rel="stylesheet" href="css/layouts/side-menu.css" />
+    <!--"jquery.mobile-1.1.0.min.css">
+  </head>
+  <body>
+    <div data-role="page" id="home">
+      <div data-role="header">
+        <h1>Home</h1>
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#home" data-transition="none" data-icon="home">Home</a></li>
+            <li><a href="#startTracking" data-transition="none" data-icon="plus">Track</a></li>
+            <li><a href="#history" data-transition="none" data-icon="star">History</a></li>
+          </ul>
+        </div>
+      </div>
+      <div data-role="content">
+        <p>Welcome to the <em>ExerciseTracker</em> app. By clicking <em>Track</em> you can record your workouts using the GPS feature on your phone. Learn how to build this app by reading <em>mobile.tutsplus.com</em>.</p>
+        <button id="home_network_button" data-icon="check">Internet Access Enabled</button>
+        <button id="home_clearstorage_button">Clear local storage</button>
+        <button id="home_seedgps_button">Load Seed GPS Data</button>
+      </div>
+      <div id="map"></div>
+      <script>
+        var map;
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 8
+          });
+        }
+      </script>
+      <!--script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCwYqJa7JQZ6OYP8pmOblwijW73sE1pzw&callback=initMap"
+      async defer></script>
+    </div>
+    <div data-role="page" id="startTracking">
+      <div data-role="header">
+        <h1>Track</h1>
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#home" data-transition="none" data-icon="home">Home</a></li>
+            <li><a href="#startTracking" data-transition="none" data-icon="plus">Track</a></li>
+            <li><a href="#history" data-transition="none" data-icon="star">History</a></li>
+          </ul>
+        </div>
+      </div>
+      <div data-role="content">
+        <p id="startTracking_status"></p>
+          <div data-role="fieldcontain" class="ui-hide-label">
+            <label for="track_id">Track ID/Name:</label>
+            <input type="text" name="track_id" id="track_id" placeholder="Workout ID/Name"/>
+          </div>
+        <button data-role="button" id="startTracking_start">Start Tracking</button>
+        <button data-role="button" id="startTracking_stop">Stop Tracking</button>
+        <p id="startTracking_debug"></p>
+      </div>
+    </div>
+    <div data-role="page" id="history">
+      <div data-role="header">
+        <h1>History</h1>
+          <div data-role="navbar">
+            <ul>
+                <li><a href="#home" data-transition="none" data-icon="home">Home</a></li>
+                <li><a href="#startTracking" data-transition="none" data-icon="plus">Track</a></li>
+                <li><a href="#history" data-transition="none" data-icon="star">History</a></li>
+            </ul>
+          </div>
+        </div>
+        <div data-role="content">
+          <p id="tracks_recorded"></p>
+          <ul data-role="listview" id="history_tracklist">
+          </ul>
+        </div>
+    </div>
+    <div data-role="page" id="track_info">
+      <div data-role="header">
+        <h1>Viewing Single Workout</h1>
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#home" data-transition="none" data-icon="home">Home</a></li>
+            <li><a href="#startTracking" data-transition="none" data-icon="plus">Track</a></li>
+            <li><a href="#history" data-transition="none" data-icon="star">History</a></li>
+          </ul>
+        </div>
+      </div>
+      <div data-role="content">
+        <p id="track_info_info"></p>
+        <div id="map_canvas" style="position:absolute;bottom:0;left:0;width:100%;height:300px;"></div>
+      </div>
+    </div>
+  </body>
+</html-->
