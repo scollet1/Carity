@@ -86,21 +86,22 @@ body {
     </style>
   </head>
   <body>
-    <div id="mySidenav" class="sidenav">
+    <!--div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="index.html">Home</a>
   <a href="#">Services</a>
   <a href="#">Clients</a>
   <a href="#">Contact</a>
-</div>
-<!--nav class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left w3-center" style="display:none" id="mySidebar">
+</div-->
+
+<nav class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left w3-center" style="display:none" id="mySidebar">
   <h1 class="w3-xxxlarge w3-text-theme">Side Navigation</h1>
   <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
   <a href="#" class="w3-bar-item w3-button">Home</a>
   <a href="#" class="w3-bar-item w3-button">Track Progress</a>
   <!--a href="#" class="w3-bar-item w3-button">Link 3</a>
   <a href="#" class="w3-bar-item w3-button">Link 4</a>
-</nav-->
+</nav>
 
 <!--span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
@@ -188,6 +189,17 @@ function closeNav() {
       }
     }
   </script>
+    <script>
+      function w3_open() {
+          var x = document.getElementById("mySidebar");
+          x.style.width = "100%";
+          x.style.fontSize = "40px";
+          x.style.paddingTop = "10%";
+          x.style.display = "block";
+      }
+      function w3_close() {
+          document.getElementById("mySidebar").style.display = "none";
+      }
     </script>
     <div id="myProgress">
       <div id="myBar">0%</div>
