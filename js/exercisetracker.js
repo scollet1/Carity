@@ -10,27 +10,23 @@
 //                                                                            //
 // ************************************************************************** //
 
-var track_id = '';      // Name/ID of the exercise
-var watch_id = null;    // ID of the geolocation
-var tracking_data = []; // Array containing GPS position objects
+global var start
+global var money_goal
 
-// Initialize the default app
-firebase.initializeApp(defaultAppConfig);
+navigator.geolocation.getCurrentPosition(function(start) {
+});
 
-// Initialize another app with a different config
-var otherApp = firebase.initializeApp(otherAppConfig, "other");
+function trackDistance(start) {
+  navigator.geolocation.watchPosition(function(position) {
+    //document.getElementById('currentLat').innerHTML = position.coords.latitude;
+    //document.getElementById('currentLon').innerHTML = position.coords.longitude;
+    if (start != position) {
+      money_goal += 1;
+    }
+  }
+}
 
-console.log(firebase.app().name);  // "[DEFAULT]"
-console.log(otherApp.name);        // "other"
-
-// Use the shorthand notation to retrieve the default app's services
-var defaultStorage = firebase.storage();
-var defaultDatabase = firebase.database();
-
-// Use the otherApp variable to retrieve the other app's services
-var otherStorage = otherApp.storage();
-var otherDatabase = otherApp.database();
-
+/*
 $("#startTracking_start").live('click', function(){
 
     // Start tracking the User
@@ -66,3 +62,4 @@ document.addEventListener("deviceready", function(){
   }
 
 });
+*/
