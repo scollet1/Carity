@@ -1,7 +1,7 @@
 # Carity
-======
+=
 ## A collaboration between 42 and ESD students
-======
+=
 Carity was a project idea formed by myself, another developer from 42, Silicon Valley, [Ian Wagner](https://github.com/dawag415) and two design students from L'École Supérieure du Digital (ESD), [Tracy Girault](https://www.linkedin.com/in/tracy-girault-23578b94/?lipi=urn%3Ali%3Apage%3Ad_flagship3_people_connections%3BWq58guDcQpOauQnSt7fyDQ%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_people_connections-profile) and [Andre Peytier](https://www.linkedin.com/in/andrea-peytier-44497b96/)
 
 The project was overseen by Nissan-Renault and revolved around the automotive industry.
