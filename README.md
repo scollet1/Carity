@@ -22,6 +22,10 @@ Over the course of a week, we were tasked with brainstorming a product to be use
 
 Carity is simple. You choose a charity. You drive. The charity recieves money equal to the amount of miles driven. Of course there are other methods of transportation, but we are focusing on automotive transport as the backbone for donation generation.
 
+The framework we used was React-Native, which we had never used before that weekend. In fact, 72 hours before the deadline, neither of us knew React-Native was even a thing. React-Native was pleasantly surprising. Even more surprising was the effectiveness of our workflow. Personally, I find it hard to design on the fly, especially with a background in backend engineering. With a designer and a project manager, everything was smooth as butter. The only hiccups came from not understanding the technology at first, but were qucikly ironed out as the designs were physically implemented in the app.
+
+We have yet to deploy.
+
 [image1]: https://github.com/scollet1/scollet1.github.io/blob/master/images/Screen%20Shot%202017-09-26%20at%203.15.40%20PM.png "Opening Screen"
 
 [image2]: https://github.com/scollet1/scollet1.github.io/blob/master/images/Screen%20Shot%202017-09-26%20at%201.47.12%20PM.png "Opening Screen"
