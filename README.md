@@ -6,9 +6,7 @@ Carity was a project idea formed by myself, another developer from 42, Silicon V
 
 The project was overseen by Nissan-Renault and revolved around the automotive industry.
 
-Over the course of a week, we were tasked with brainstorming a product to be used by car owners. It could be anything. IoT and connectivity, autonomous driving, shipping, rideshare, etc. We decided to make a charity app. And so we came up with
-
-### Carity
+Over the course of a week, we were tasked with brainstorming a product to be used by car owners. It could be anything. IoT and connectivity, autonomous driving, shipping, rideshare, etc. We decided to make a charity app. And so we came up with **Carity**
 
 ![alt text][image1]
 
