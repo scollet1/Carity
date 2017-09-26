@@ -22,7 +22,9 @@ Over the course of a week, we were tasked with brainstorming a product to be use
 
 Carity is simple. You choose a charity. You drive. The charity recieves money equal to the amount of miles driven. Of course there are other methods of transportation, but we are focusing on automotive transport as the backbone for donation generation.
 
-The framework we used was React-Native, which we had never used before that weekend. In fact, 72 hours before the deadline, neither of us knew React-Native was even a thing. React-Native was pleasantly surprising. Even more surprising was the effectiveness of our workflow. Personally, I find it hard to design on the fly, especially with a background in backend engineering. With a designer and a project manager, everything was smooth as butter. The only hiccups came from not understanding the technology at first, but were qucikly ironed out as the designs were physically implemented in the app.
+The framework we used was React-Native, which we had never used before that weekend. In fact, 72 hours before the deadline, neither of us knew React-Native was even a thing. React-Native was pleasantly surprising as I had only worked with the vanilla web-stack (JS, HTML, CSS) before this. Being able to load up the app in an online [simulator](https://expo.io/) was a great feeling. I would like to work with this technology some more, mostly because it yields rapid development cycles and fast prototyping. The effectiveness of our workflow was the best I've ever seen, and that was with a double language barrier! 
+
+Personally, I find it hard to design on the fly, especially with a background in backend engineering. With a designer and a project manager, everything was smooth as butter. The only hiccups came from not understanding the technology at first, but were qucikly ironed out as the designs were physically implemented in the app.
 
 We have yet to deploy.
 
